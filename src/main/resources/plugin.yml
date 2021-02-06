@@ -1,0 +1,7 @@
+name: DailyBonus
+main: dev.mirror.kt.minecraft.dailybonus.DailyBonus
+version: @VERSION@
+api-version: 1.16
+commands:
+  dailybonus:
+    usage: DailyBonus command

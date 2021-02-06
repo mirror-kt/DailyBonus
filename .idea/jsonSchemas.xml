@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="Bukkit Plugin">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="Bukkit Plugin" />
+              <option name="relativePathToSchema" value="https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/bukkit-plugin.json" />
+              <option name="schemaVersion" value="JSON スキーマのバージョン 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/plugin.yml" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

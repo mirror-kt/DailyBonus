@@ -1,0 +1,5 @@
+set-item-success: "Daily bonus items are set as:"
+daily-bonuses-message: "You got a daily bonus!"
+daily-bonuses-drop-message: "Your inventory is full, so we dropped daily bonus to the ground!"
+daily-bonuses-admin-success: "Daily bonus items are given to you!"
+reload-success: "Reload succeed."
