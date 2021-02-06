@@ -9,7 +9,7 @@ import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 import java.time.ZonedDateTime
 import kotlin.io.path.ExperimentalPathApi
-import kotlin.io.path.createDirectory
+import kotlin.io.path.createDirectories
 import kotlin.io.path.notExists
 import kotlin.io.path.reader
 
@@ -17,7 +17,7 @@ class GiveDailyBonusListener : Listener {
     @OptIn(ExperimentalPathApi::class)
     private val playersDir = DailyBonus.getPath("players")
         .also {
-            if (it.notExists()) it.createDirectory()
+            if (it.notExists()) it.createDirectories()
         }
 
     @EventHandler

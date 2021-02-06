@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
 import java.nio.file.Path
 import kotlin.io.path.ExperimentalPathApi
-import kotlin.io.path.createDirectory
+import kotlin.io.path.createDirectories
 import kotlin.io.path.listDirectoryEntries
 import kotlin.io.path.notExists
 import kotlin.io.path.outputStream
@@ -74,7 +74,7 @@ class DailyBonus : JavaPlugin() {
         fun reloadItems() {
             bonusItems = getPath("items")
                 .also {
-                    if (it.notExists()) it.createDirectory()
+                    if (it.notExists()) it.createDirectories()
                 }
                 .listDirectoryEntries("*.nbt")
                 .map {

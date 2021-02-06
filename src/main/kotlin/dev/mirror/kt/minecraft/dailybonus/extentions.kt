@@ -8,7 +8,7 @@ fun ItemStack.formatted() =
     "${type}${if (itemMeta?.hasDisplayName() == true) "(${itemMeta!!.displayName})" else ""} x $amount"
 
 fun Player.giveItems(items: List<ItemStack>, successMessage: String, dropMessage: String) {
-    if (inventory.storageContents.count { it == null || it.type == Material.AIR } > items.size) {
+    if (inventory.storageContents.count { it == null || it.type == Material.AIR } >= items.size) {
         inventory.addItem(*items.toTypedArray())
         sendMessage(successMessage)
     } else {

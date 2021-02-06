@@ -9,10 +9,8 @@ import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import java.util.UUID
 import kotlin.io.path.ExperimentalPathApi
-import kotlin.io.path.createDirectory
 import kotlin.io.path.deleteIfExists
 import kotlin.io.path.listDirectoryEntries
-import kotlin.io.path.notExists
 
 object SetItemsCommand : DailyBonusCommand {
     override val commandName: String = "setitems"
@@ -26,9 +24,6 @@ object SetItemsCommand : DailyBonusCommand {
 
         val itemsDir = DailyBonus.getPath("items")
             .also {
-                if (it.notExists()) {
-                    it.createDirectory()
-                }
                 it.listDirectoryEntries()
                     .forEach { file -> file.deleteIfExists() }
             }
